@@ -1,0 +1,10 @@
+pytesseract
+pdftabextract
+numpy==1.16.1
+opencv-python==3.2.0.6
+addict
+autocorrect
+parsley
+tesserocr
+python-Levenshtein
+
