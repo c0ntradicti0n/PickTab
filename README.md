@@ -1,18 +1,17 @@
 picktab
 -------
 
-Based on a script from [pdftabextract](https://github.com/WZBSocialScienceCenter/pdftabextract),
-I share my code. 
-
 It extracts first the tabular layout and goes on to the OCR reading.
 
-It's a kind of slow, but data quality matters.
+Based on a script from [pdftabextract](https://github.com/WZBSocialScienceCenter/pdftabextract), Markus Konrad
 
 The reason for this is, that tesseract makes a lot of mistakes, when processing layouted tables, e.g. ignoring some columns or cells.
-That has nothing to do with the quality of training. 
+One can either change the cell borders to readable chars or take subimages. I tried the latter.
 
-Therefore this script uses the layout recognition of pdftabextract, which would also be able to adapt to skewed layouts,
-to read ocr from pictures of the single cells.
+Therefore this script uses the layout recognition of pdftabextract, and creates little images for the cells to do OpticalCharacterRecognition.
 
-For more documentation and testing see the module itself.
+References
+----------
+[pdftabextract](https://github.com/WZBSocialScienceCenter/pdftabextract)
 
+[other approach: Camelot](https://hackernoon.com/an-open-source-science-tool-to-extract-tables-from-pdfs-into-excels-3ed3cc7f22e1)
